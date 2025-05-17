@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.progmasters.probac","l":"Main"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.progmasters.probac","l":"MainStatic"},{"p":"hu.progmasters.probac","l":"Morse"}];updateSearchResults();
