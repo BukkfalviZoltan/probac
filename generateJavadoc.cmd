@@ -1,0 +1,1 @@
+ C:\DEV\Java\jdk-23.0.1\bin\javadoc.exe   -private -d  C:\Users\User\source\Java\Idea\probac\docs  -sourcepath .\src\main\java -subpackages hu.progmasters.probac
