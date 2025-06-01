@@ -23,6 +23,9 @@ public class Morse {
      * @return index of letter
      */
     int getPosInAlphabet(String letter) {
+        if (letter == null) {
+            letter = "";
+        }
         letter = letter.toLowerCase();
         String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890";
         return alphabet.indexOf(letter);
