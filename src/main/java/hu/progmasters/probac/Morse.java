@@ -1,5 +1,9 @@
 package hu.progmasters.probac;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Converts string into Morse Code
  */
@@ -71,19 +75,29 @@ public class Morse {
                 "-----"  // 0
         };
 
-        ConvertText2Morse(input, morsecode);
+
+        List<String> results = ConvertText2Morse(input, morsecode);
+        //System.out.println(); // new line at the end
+        String noBrackets = Arrays.toString(results.toArray()).replace("[", "").replace("]", "");
+        System.out.println(noBrackets);
     }
 
-    private void ConvertText2Morse(String input, String[] morsecode) {
+    public List<String> ConvertText2Morse(String input, String[] morsecode) {
+        List<String> results = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             int pos = getPosInAlphabet(String.valueOf(c));
             if (pos >= 0) {
-                System.out.print(morsecode[pos] + " ");
-            } else {
-                System.out.print("? "); // optional: marker for unknown characters
+                //System.out.print(morsecode[pos] + " ");
+                results.add(morsecode[pos]);
+            }
+
+            else {
+                //System.out.print("? "); // optional: marker for unknown characters
+                results.add("?");
             }
         }
-        System.out.println(); // new line at the end
+        return results;
     }
+
 }
