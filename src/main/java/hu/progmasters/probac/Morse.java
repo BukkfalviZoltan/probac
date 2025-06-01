@@ -48,7 +48,10 @@ public class Morse {
      */
     public List<String> ConvertText2Morse(String input) {
         input = input.toLowerCase();
-        input = input.replaceAll("[^a-z0-9]", ""); // removes everything but letters and digits
+       // input = input.replaceAll("[^a-z0-9]", ""); // removes everything but letters and digits
+        input = input.replace(" ","");
+        input = input.replace(".","");
+        input = input.replace(",","");
 
         String[] morsecode = {
                 ".-",   // A

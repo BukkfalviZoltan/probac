@@ -34,4 +34,11 @@ public class TestMorse {
         List<String> results = morse.ConvertText2Morse("BA");
         Assertions.assertEquals(morselist, results);
     }
+    @Test
+    void testConvertText2MorseAT(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add("?");
+        List<String> results = morse.ConvertText2Morse("@");
+        Assertions.assertEquals(morselist, results);
+    }
 }
