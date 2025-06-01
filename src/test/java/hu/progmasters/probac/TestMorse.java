@@ -1,6 +1,10 @@
 package hu.progmasters.probac;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //https://junit.org/junit5/docs/current/user-guide/#writing-tests
 public class TestMorse {
     Morse morse = new Morse();
@@ -14,7 +18,20 @@ public class TestMorse {
 
 
     }
+    @Test
     void testConvertText2Morse(){
-        Assertions.assertEquals(0, morse.ConvertText2Morse("A", new String[]{".-"}));
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".-");
+        List<String> results = morse.ConvertText2Morse("A");
+
+        Assertions.assertEquals(morselist, results);
+    }
+    @Test
+    void testConvertText2MorseBA(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add("-...");
+        morselist.add(".-");
+        List<String> results = morse.ConvertText2Morse("BA");
+        Assertions.assertEquals(morselist, results);
     }
 }

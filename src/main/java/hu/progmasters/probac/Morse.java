@@ -36,6 +36,17 @@ public class Morse {
      * @param input String that is to be converted
      */
     void printMorseCode(String input) {
+        List<String> results = ConvertText2Morse(input);
+        String noBrackets = Arrays.toString(results.toArray()).replace("[", "").replace("]", "");
+        System.out.println(noBrackets);
+    }
+
+    /**
+     * Converts the contents of input into Morse code.
+     * @param input given string that is to be converted.
+     * @return results, an Arraylist containing the input converted to Morse.
+     */
+    public List<String> ConvertText2Morse(String input) {
         input = input.toLowerCase();
         input = input.replaceAll("[^a-z0-9]", ""); // removes everything but letters and digits
 
@@ -79,19 +90,6 @@ public class Morse {
         };
 
 
-        List<String> results = ConvertText2Morse(input, morsecode);
-        //System.out.println(); // new line at the end
-        String noBrackets = Arrays.toString(results.toArray()).replace("[", "").replace("]", "");
-        System.out.println(noBrackets);
-    }
-
-    /**
-     * Converts the contents of input into Morse code.
-     * @param input given string that is to be converted.
-     * @param morsecode string array containing the pieces of code each member of the alphabet is converted to.
-     * @return results, an Arraylist containing the input converted to Morse.
-     */
-    public List<String> ConvertText2Morse(String input, String[] morsecode) {
         List<String> results = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
@@ -106,6 +104,7 @@ public class Morse {
                 results.add("?");
             }
         }
+
         return results;
     }
 
