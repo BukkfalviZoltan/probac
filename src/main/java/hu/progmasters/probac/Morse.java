@@ -71,6 +71,10 @@ public class Morse {
                 "-----"  // 0
         };
 
+        ConvertText2Morse(input, morsecode);
+    }
+
+    private void ConvertText2Morse(String input, String[] morsecode) {
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             int pos = getPosInAlphabet(String.valueOf(c));
