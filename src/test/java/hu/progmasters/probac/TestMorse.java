@@ -12,5 +12,9 @@ public class TestMorse {
         Assertions.assertEquals(0, morse.getPosInAlphabet(null));
         Assertions.assertEquals(-1, morse.getPosInAlphabet("#"));
 
+
+    }
+    void testConvertText2Morse(){
+        Assertions.assertEquals(0, morse.ConvertText2Morse("A", new String[]{".-"}));
     }
 }

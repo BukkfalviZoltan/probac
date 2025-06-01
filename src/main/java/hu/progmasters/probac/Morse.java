@@ -85,6 +85,12 @@ public class Morse {
         System.out.println(noBrackets);
     }
 
+    /**
+     * Converts the contents of input into Morse code.
+     * @param input given string that is to be converted.
+     * @param morsecode string array containing the pieces of code each member of the alphabet is converted to.
+     * @return results, an Arraylist containing the input converted to Morse.
+     */
     public List<String> ConvertText2Morse(String input, String[] morsecode) {
         List<String> results = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
