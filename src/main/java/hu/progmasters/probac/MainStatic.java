@@ -3,7 +3,7 @@ package hu.progmasters.probac;
 /**
  * Converts string into Morse Code
  */
-public class Main {
+public class MainStatic {
     /**
      * Starts main code
      * @param args String array standard start parameter
