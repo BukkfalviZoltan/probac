@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Converts string into Morse Code
  */
-public class Morse {
+public class Morse implements MorseI {
 
     /**
      * Default string to be converted.
