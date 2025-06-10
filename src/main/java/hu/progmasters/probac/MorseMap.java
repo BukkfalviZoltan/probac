@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Converts string into Morse Code
  */
-public class MorseMap {
+public class MorseMap implements MorseI {
 
     /**
      * Default string to be converted.
