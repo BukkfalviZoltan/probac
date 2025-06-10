@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"hu.progmasters.probac","l":"MainStatic"},{"p":"hu.progmasters.probac","l":"Morse"},{"p":"hu.progmasters.probac","l":"MorseI"},{"p":"hu.progmasters.probac","l":"MorseMap"},{"p":"hu.progmasters.probac","l":"TestMorse"},{"p":"hu.progmasters.probac","l":"TestMorseI"}];updateSearchResults();
