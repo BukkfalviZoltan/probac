@@ -4,7 +4,7 @@
 
     <groupId>hu.progmasters.probac</groupId>
     <artifactId>morse</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.0</version>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
@@ -13,7 +13,7 @@
     </properties>
     <scm>
         <developerConnection>scm:git:https://github.com/BukkfalviZoltan/probac.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>morse-1.1.0</tag>
   </scm>
     <build>
         <!-- To define the plugin version in your parent POM -->
