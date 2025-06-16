@@ -52,9 +52,17 @@ public class Morse implements MorseI {
             "--...", // 7
             "---..", // 8
             "----.", // 9
-            "-----"  // 0
+            "-----",  // 0
+            ".--.-",  // Á
+            ".-,-",  // Ä
+            "..-..",  // É
+            "--.--",  // Ñ
+            "---.",  // Ö
+            "..--",  // Ü
+
+
     };
-    private final String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890";
+    private final String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890áäéñöü";
 
     /**
      * Starts main code

@@ -54,6 +54,13 @@ public class MorseMap implements MorseI {
         morseMap.put("8","---..");
         morseMap.put("9","----.");
         morseMap.put("0","----");
+        morseMap.put("á",".--.-");
+        morseMap.put("ä",".-,-");
+        morseMap.put("é","..-..");
+        morseMap.put("ñ","--.--");
+        morseMap.put("ö","---.");
+        morseMap.put("ü","..--");
+
     }
 
     /**

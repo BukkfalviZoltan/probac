@@ -18,8 +18,11 @@ public class MainStatic {
      * @return index of letter
      */
     static int getPosInAlphabet(String letter) {
+        if (letter == null) {
+            letter = "";
+        }
         letter = letter.toLowerCase();
-        String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890";
+        String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890áäéñöü";
         return alphabet.indexOf(letter);
     }
 
@@ -67,7 +70,13 @@ public class MainStatic {
                 "--...", // 7
                 "---..", // 8
                 "----.", // 9
-                "-----"  // 0
+                "-----",  // 0
+                ".--.-",  // Á
+                ".-,-",  // Ä
+                "..-..",  // É
+                "--.--",  // Ñ
+                "---.",  // Ö
+                "..--",  // Ü
         };
 
         for (int i = 0; i < input.length(); i++) {

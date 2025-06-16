@@ -22,7 +22,6 @@ public class TestMorse {
         List<String> morselist = new ArrayList<>();
         morselist.add(".-");
         List<String> results = morse.convertText2Morse("A");
-
         Assertions.assertEquals(morselist, results);
     }
     @Test
@@ -158,5 +157,37 @@ public class TestMorse {
         long endTime = System.currentTimeMillis();
         System.out.println(endTime - startTime);
         Assertions.assertLinesMatch(morselist, results);
+    }
+
+    @Test
+    void testConvertText2MorseInternational(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".--.-");
+        //List<String> results = morse.convertText2Morse("Á");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("Á"));
+
+        morselist.clear();
+        morselist.add(".-,-");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("Ä"));
+
+        morselist.clear();
+        morselist.add(".-,-");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("ä"));
+
+        morselist.clear();
+        morselist.add("..-..");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("É"));
+
+        morselist.clear();
+        morselist.add("--.--");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("Ñ"));
+
+        morselist.clear();
+        morselist.add("---.");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("Ö"));
+
+        morselist.clear();
+        morselist.add("..--");
+        Assertions.assertEquals(morselist, morse.convertText2Morse("Ü"));
     }
 }
