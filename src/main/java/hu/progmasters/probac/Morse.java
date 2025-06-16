@@ -62,7 +62,7 @@ public class Morse implements MorseI {
 
 
     };
-    private final String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890";
+    private final String alphabet = "abcdefghijklmnopqrstuvwxyz1234567890áäéñöü";
 
     /**
      * Starts main code
