@@ -204,4 +204,11 @@ public class TestMorse {
         List<String> results = morse.convertText2Morse("Ä");
         Assertions.assertEquals(morselist, results);
     }
+    @Test
+    void testConvertText2MorseJ(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".---");
+        List<String> results = morse.convertText2Morse("J");
+        Assertions.assertEquals(morselist, results);
+    }
 }

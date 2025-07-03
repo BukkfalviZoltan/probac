@@ -28,6 +28,7 @@ public class MorseMap implements MorseI {
         morseMap.put("g","--.");
         morseMap.put("h","....");
         morseMap.put("i","..");
+        morseMap.put("j",".---");
         morseMap.put("k","-.-");
         morseMap.put("l",".-..");
         morseMap.put("m","--");

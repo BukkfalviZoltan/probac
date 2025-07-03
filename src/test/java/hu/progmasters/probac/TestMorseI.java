@@ -49,5 +49,9 @@ public class TestMorseI {
         morselist.clear();
         morselist.add("..--");
         Assertions.assertEquals(morselist, morseMap.convertText2Morse("Ü"));
+
+        morselist.clear();
+        morselist.add(".---");
+        Assertions.assertEquals(morselist, morseMap.convertText2Morse("J"));
     }
 }
