@@ -190,4 +190,18 @@ public class TestMorse {
         morselist.add("..--");
         Assertions.assertEquals(morselist, morse.convertText2Morse("Ü"));
     }
+    @Test
+    void testConvertText2MorseAA(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".--.-");
+        List<String> results = morse.convertText2Morse("Á");
+        Assertions.assertEquals(morselist, results);
+    }
+    @Test
+    void testConvertText2MorseAAA(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".-.-");
+        List<String> results = morse.convertText2Morse("Ä");
+        Assertions.assertEquals(morselist, results);
+    }
 }
