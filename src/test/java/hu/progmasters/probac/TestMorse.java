@@ -111,6 +111,27 @@ public class TestMorse {
         List<String> results = morseMap.convertText2Morse("@");
         Assertions.assertEquals(morselist, results);
     }
+
+    @Test
+    void testConvertText2MorseMapIsThereComma(){
+        /*
+        Collection<String> codes = morseMap.morseMap.values();
+        for (String value : codes) {
+            //System.out.println(value);
+            if (value.contains(",")) {
+                Assertions.fail("Contains comma: " + value);
+            }
+        }
+        */
+        for (String key : morseMap.morseMap.keySet()) {
+            //System.out.println(value);
+            String value = morseMap.morseMap.get(key);
+            if (value.contains(",")) {
+                Assertions.fail("Contains comma: value: " + value+ " key: " + key);
+            }
+        }
+    }
+
     @Test
     void testConvertText2MorseMapLong(){
         List<String> morselist = new ArrayList<>();
@@ -167,11 +188,11 @@ public class TestMorse {
         Assertions.assertEquals(morselist, morse.convertText2Morse("Á"));
 
         morselist.clear();
-        morselist.add(".-,-");
+        morselist.add(".-.-");
         Assertions.assertEquals(morselist, morse.convertText2Morse("Ä"));
 
         morselist.clear();
-        morselist.add(".-,-");
+        morselist.add(".-.-");
         Assertions.assertEquals(morselist, morse.convertText2Morse("ä"));
 
         morselist.clear();
@@ -189,5 +210,26 @@ public class TestMorse {
         morselist.clear();
         morselist.add("..--");
         Assertions.assertEquals(morselist, morse.convertText2Morse("Ü"));
+    }
+    @Test
+    void testConvertText2MorseAA(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".--.-");
+        List<String> results = morse.convertText2Morse("Á");
+        Assertions.assertEquals(morselist, results);
+    }
+    @Test
+    void testConvertText2MorseAAA(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".-.-");
+        List<String> results = morse.convertText2Morse("Ä");
+        Assertions.assertEquals(morselist, results);
+    }
+    @Test
+    void testConvertText2MorseJ(){
+        List<String> morselist = new ArrayList<>();
+        morselist.add(".---");
+        List<String> results = morse.convertText2Morse("J");
+        Assertions.assertEquals(morselist, results);
     }
 }

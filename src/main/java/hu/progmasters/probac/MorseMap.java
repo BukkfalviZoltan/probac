@@ -19,6 +19,10 @@ public class MorseMap implements MorseI {
     Map<String, String> morseMap = new HashMap<>();
 
     public MorseMap() {
+        initMap();
+    }
+
+    private void initMap() {
         morseMap.put("a",".-");
         morseMap.put("b","-...");
         morseMap.put("c","-.-.");
@@ -28,6 +32,7 @@ public class MorseMap implements MorseI {
         morseMap.put("g","--.");
         morseMap.put("h","....");
         morseMap.put("i","..");
+        morseMap.put("j",".---");
         morseMap.put("k","-.-");
         morseMap.put("l",".-..");
         morseMap.put("m","--");
@@ -55,12 +60,11 @@ public class MorseMap implements MorseI {
         morseMap.put("9","----.");
         morseMap.put("0","----");
         morseMap.put("á",".--.-");
-        morseMap.put("ä",".-,-");
+        morseMap.put("ä",".-.-");
         morseMap.put("é","..-..");
         morseMap.put("ñ","--.--");
         morseMap.put("ö","---.");
         morseMap.put("ü","..--");
-
     }
 
     /**
@@ -99,14 +103,7 @@ public class MorseMap implements MorseI {
         List<String> results = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             String c = input.substring(i,i+1);
-            if (morseMap.containsKey(c)) {
-                //String s = morseMap.get(c);
-                results.add(morseMap.get(c));
-            }
-            else {
-                //System.out.print("? "); // optional: marker for unknown characters
-                results.add("?");
-            }
+            results.add(morseMap.getOrDefault(c, "?"));
         }
         return results;
     }
