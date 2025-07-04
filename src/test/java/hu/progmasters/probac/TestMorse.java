@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 //https://junit.org/junit5/docs/current/user-guide/#writing-tests
@@ -111,6 +112,27 @@ public class TestMorse {
         List<String> results = morseMap.convertText2Morse("@");
         Assertions.assertEquals(morselist, results);
     }
+
+    @Test
+    void testConvertText2MorseMapIsThereComma(){
+        /*
+        Collection<String> codes = morseMap.morseMap.values();
+        for (String value : codes) {
+            //System.out.println(value);
+            if (value.contains(",")) {
+                Assertions.fail("Contains comma: " + value);
+            }
+        }
+        */
+        for (String key : morseMap.morseMap.keySet()) {
+            //System.out.println(value);
+            String value = morseMap.morseMap.get(key);
+            if (value.contains(",")) {
+                Assertions.fail("Contains comma: value: " + value+ " key: " + key);
+            }
+        }
+    }
+
     @Test
     void testConvertText2MorseMapLong(){
         List<String> morselist = new ArrayList<>();
