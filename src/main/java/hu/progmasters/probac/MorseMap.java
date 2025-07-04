@@ -19,6 +19,10 @@ public class MorseMap implements MorseI {
     Map<String, String> morseMap = new HashMap<>();
 
     public MorseMap() {
+        initMap();
+    }
+
+    private void initMap() {
         morseMap.put("a",".-");
         morseMap.put("b","-...");
         morseMap.put("c","-.-.");
@@ -56,12 +60,11 @@ public class MorseMap implements MorseI {
         morseMap.put("9","----.");
         morseMap.put("0","----");
         morseMap.put("á",".--.-");
-        morseMap.put("ä",".-,-");
+        morseMap.put("ä",".-.-");
         morseMap.put("é","..-..");
         morseMap.put("ñ","--.--");
         morseMap.put("ö","---.");
         morseMap.put("ü","..--");
-
     }
 
     /**
