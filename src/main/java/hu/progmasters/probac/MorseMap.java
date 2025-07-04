@@ -103,14 +103,7 @@ public class MorseMap implements MorseI {
         List<String> results = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             String c = input.substring(i,i+1);
-            if (morseMap.containsKey(c)) {
-                //String s = morseMap.get(c);
-                results.add(morseMap.get(c));
-            }
-            else {
-                //System.out.print("? "); // optional: marker for unknown characters
-                results.add("?");
-            }
+            results.add(morseMap.getOrDefault(c, "?"));
         }
         return results;
     }
