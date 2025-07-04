@@ -189,11 +189,11 @@ public class TestMorse {
         Assertions.assertEquals(morselist, morse.convertText2Morse("Á"));
 
         morselist.clear();
-        morselist.add(".-,-");
+        morselist.add(".-.-");
         Assertions.assertEquals(morselist, morse.convertText2Morse("Ä"));
 
         morselist.clear();
-        morselist.add(".-,-");
+        morselist.add(".-.-");
         Assertions.assertEquals(morselist, morse.convertText2Morse("ä"));
 
         morselist.clear();
