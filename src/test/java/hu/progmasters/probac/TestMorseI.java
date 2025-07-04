@@ -31,7 +31,7 @@ public class TestMorseI {
         Assertions.assertEquals(morselist, morseMap.convertText2Morse("Á"));
 
         morselist.clear();
-        morselist.add(".-,-");
+        morselist.add(".-.-");
         Assertions.assertEquals(morselist, morseMap.convertText2Morse("Ä"));
 
         morselist.clear();
